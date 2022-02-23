@@ -36,7 +36,7 @@ stages:
       resourceType: VirtualMachine
     strategy:
         rolling:
-          maxParallel: 2  #for percentages, mention as x%
+          maxParallel: 1  #for percentages, mention as x%
           preDeploy:
             steps:
             - download: current
@@ -50,6 +50,7 @@ stages:
                 script: |
                   # Modify deployment script based on the app type
                   echo "Starting deployment script run"
+                  whoami
                   sudo java -jar '$(Pipeline.Workspace)/drop/target/*.jar'
           routeTraffic:
             steps:
