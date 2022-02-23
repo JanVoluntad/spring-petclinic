@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-- job: Build
+  - job: Build
     displayName: Build Maven Project
     steps:
     - task: Maven@3
