@@ -11,5 +11,5 @@ pool:
 
 
 jobs: Build
-displayName: Build Maven Project
+  displayName: Build Maven Project
 
