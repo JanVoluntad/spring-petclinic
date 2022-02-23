@@ -32,7 +32,7 @@ stages:
   - deployment: VMDeploy
     displayName: web
     environment:
-      name: <environment name>
+      name: my-app-name-janv
       resourceType: VirtualMachine
     strategy:
         rolling:
